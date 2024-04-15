@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7687CD92B9F515B009D2C08 /* CazyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7687CD82B9F515B009D2C08 /* CazyCell.swift */; };
+		B777B2E32B98C4CA00D68AF7 /* deckViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777B2E22B98C4CA00D68AF7 /* deckViewerViewController.swift */; };
 		B78333892B976F610032C5EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78333882B976F610032C5EE /* AppDelegate.swift */; };
 		B783338B2B976F610032C5EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783338A2B976F610032C5EE /* SceneDelegate.swift */; };
 		B783338D2B976F610032C5EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783338C2B976F610032C5EE /* ViewController.swift */; };
@@ -16,6 +18,13 @@
 		B78333A02B976F630032C5EE /* guessWhoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B783339F2B976F630032C5EE /* guessWhoTests.swift */; };
 		B78333AA2B976F630032C5EE /* guessWhoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78333A92B976F630032C5EE /* guessWhoUITests.swift */; };
 		B78333AC2B976F630032C5EE /* guessWhoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78333AB2B976F630032C5EE /* guessWhoUITestsLaunchTests.swift */; };
+		B78333B92B9770870032C5EE /* deckMakerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B78333B82B9770870032C5EE /* deckMakerViewController.swift */; };
+		B78333BB2B9773E00032C5EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B78333BA2B9773DF0032C5EE /* GoogleService-Info.plist */; };
+		B78333BE2B9774780032C5EE /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B78333BD2B9774780032C5EE /* FirebaseAuth */; };
+		B78333C02B9774780032C5EE /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B78333BF2B9774780032C5EE /* FirebaseDatabase */; };
+		B78333C22B9774780032C5EE /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B78333C12B9774780032C5EE /* FirebaseDatabaseSwift */; };
+		B78333C42B9774780032C5EE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B78333C32B9774780032C5EE /* FirebaseFirestore */; };
+		B7E49B7B2B9A16930054385D /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E49B7A2B9A16930054385D /* playViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7687CD82B9F515B009D2C08 /* CazyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CazyCell.swift; sourceTree = "<group>"; };
+		B777B2E22B98C4CA00D68AF7 /* deckViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deckViewerViewController.swift; sourceTree = "<group>"; };
 		B78333852B976F610032C5EE /* guessWho.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guessWho.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78333882B976F610032C5EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B783338A2B976F610032C5EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +60,9 @@
 		B78333A52B976F630032C5EE /* guessWhoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = guessWhoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B78333A92B976F630032C5EE /* guessWhoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessWhoUITests.swift; sourceTree = "<group>"; };
 		B78333AB2B976F630032C5EE /* guessWhoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = guessWhoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B78333B82B9770870032C5EE /* deckMakerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = deckMakerViewController.swift; sourceTree = "<group>"; };
+		B78333BA2B9773DF0032C5EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B7E49B7A2B9A16930054385D /* playViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B78333C22B9774780032C5EE /* FirebaseDatabaseSwift in Frameworks */,
+				B78333C42B9774780032C5EE /* FirebaseFirestore in Frameworks */,
+				B78333C02B9774780032C5EE /* FirebaseDatabase in Frameworks */,
+				B78333BE2B9774780032C5EE /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,13 +117,18 @@
 		B78333872B976F610032C5EE /* guessWho */ = {
 			isa = PBXGroup;
 			children = (
+				B7E49B7A2B9A16930054385D /* playViewController.swift */,
+				B777B2E22B98C4CA00D68AF7 /* deckViewerViewController.swift */,
+				B7687CD82B9F515B009D2C08 /* CazyCell.swift */,
 				B78333882B976F610032C5EE /* AppDelegate.swift */,
 				B783338A2B976F610032C5EE /* SceneDelegate.swift */,
 				B783338C2B976F610032C5EE /* ViewController.swift */,
 				B783338E2B976F610032C5EE /* Main.storyboard */,
+				B78333B82B9770870032C5EE /* deckMakerViewController.swift */,
 				B78333912B976F630032C5EE /* Assets.xcassets */,
 				B78333932B976F630032C5EE /* LaunchScreen.storyboard */,
 				B78333962B976F630032C5EE /* Info.plist */,
+				B78333BA2B9773DF0032C5EE /* GoogleService-Info.plist */,
 			);
 			path = guessWho;
 			sourceTree = "<group>";
@@ -143,6 +166,12 @@
 			dependencies = (
 			);
 			name = guessWho;
+			packageProductDependencies = (
+				B78333BD2B9774780032C5EE /* FirebaseAuth */,
+				B78333BF2B9774780032C5EE /* FirebaseDatabase */,
+				B78333C12B9774780032C5EE /* FirebaseDatabaseSwift */,
+				B78333C32B9774780032C5EE /* FirebaseFirestore */,
+			);
 			productName = guessWho;
 			productReference = B78333852B976F610032C5EE /* guessWho.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +244,9 @@
 				Base,
 			);
 			mainGroup = B783337C2B976F610032C5EE;
+			packageReferences = (
+				B78333BC2B9774780032C5EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = B78333862B976F610032C5EE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +265,7 @@
 			files = (
 				B78333952B976F630032C5EE /* LaunchScreen.storyboard in Resources */,
 				B78333922B976F630032C5EE /* Assets.xcassets in Resources */,
+				B78333BB2B9773E00032C5EE /* GoogleService-Info.plist in Resources */,
 				B78333902B976F610032C5EE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7E49B7B2B9A16930054385D /* playViewController.swift in Sources */,
 				B783338D2B976F610032C5EE /* ViewController.swift in Sources */,
 				B78333892B976F610032C5EE /* AppDelegate.swift in Sources */,
+				B7687CD92B9F515B009D2C08 /* CazyCell.swift in Sources */,
+				B78333B92B9770870032C5EE /* deckMakerViewController.swift in Sources */,
 				B783338B2B976F610032C5EE /* SceneDelegate.swift in Sources */,
+				B777B2E32B98C4CA00D68AF7 /* deckViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +479,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2838R682L7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = guessWho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -449,12 +487,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = clc.guessWho;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.guessWho.dushane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -469,6 +508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2838R682L7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = guessWho/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -476,12 +516,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = clc.guessWho;
+				PRODUCT_BUNDLE_IDENTIFIER = clc.guessWho.dushane;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -601,6 +642,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B78333BC2B9774780032C5EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.22.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B78333BD2B9774780032C5EE /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B78333BC2B9774780032C5EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		B78333BF2B9774780032C5EE /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B78333BC2B9774780032C5EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		B78333C12B9774780032C5EE /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B78333BC2B9774780032C5EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		B78333C32B9774780032C5EE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B78333BC2B9774780032C5EE /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B783337D2B976F610032C5EE /* Project object */;
 }
