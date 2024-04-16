@@ -35,6 +35,12 @@ class ViewController: UIViewController {
         self.present(alertController, animated: true, completion: nil)
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    @objc func appMovedToBackground(){
+    
+    }
 
 
 }
