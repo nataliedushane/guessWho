@@ -22,11 +22,13 @@ class ViewController: UIViewController {
             }
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
         let firstTextField = alertController.textFields![0] as UITextField
-            var blah = [firstTextField.text! : AppData.names]
+            var blah = firstTextField.text!
+            AppData.singleName = "\(blah)"
+            AppData.names.append(blah)
             print(blah)
-            //self.ref.child("decks").childByAutoId().setValue(blah)
-           // self.newDeck = []
-           // self.table.reloadData()
+            print(AppData.singleName)
+            
+            
             })
         
             
@@ -39,6 +41,16 @@ class ViewController: UIViewController {
     
     
     @objc func appMovedToBackground(){
+        for i in 0 ..< AppData.names.count{
+            if (AppData.names[i] == AppData.singleName){
+                AppData.names.remove(at: i)
+            }
+        }
+        for i in 0 ..< AppData.names.count{
+            print(AppData.names[i])
+            
+        }
+        print("i removed the name!")
     
     }
 

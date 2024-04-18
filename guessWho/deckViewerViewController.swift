@@ -14,6 +14,7 @@ class AppData{
     static var bruh = 0
     static var pdecks = [[String : [String]]]()
     static var names = [String]()
+    static var singleName  = ""
 
 }
 class deckViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{

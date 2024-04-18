@@ -35,10 +35,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
-        <#code#>
+        print("hi")
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
-        <#code#>
+        print("hello")
     }
 
 
