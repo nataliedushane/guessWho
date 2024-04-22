@@ -16,7 +16,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        ref = Database.database().reference()
+
         let alertController = UIAlertController(title: "Sign in!", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
                 textField.placeholder = "Enter Name"
@@ -36,10 +37,10 @@ class ViewController: UIViewController {
                 // snapshot is a dictionary with a key and a value
                 
                 // this gets each name from each snapshot
-                let n = snapshot.value as! String
+                let n = snapshot.value as! [String]
                 // adds the name to an array if the name is not already there
                 
-                AppData.names.append(n)
+                AppData.names.append(contentsOf:  n)
                     print(n)
                 
                 })
