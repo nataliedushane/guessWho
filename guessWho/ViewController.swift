@@ -11,7 +11,8 @@ import FirebaseDatabase
 
 class ViewController: UIViewController {
     
-    
+    var ref: DatabaseReference!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,11 +24,27 @@ class ViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
         let firstTextField = alertController.textFields![0] as UITextField
             var blah = firstTextField.text!
+            
+            
+            self.ref.child("names").observe(.childAdded, with: { (snapshot) in
+                // snapshot is a dictionary with a key and a value
+                
+                // this gets each name from each snapshot
+                let n = snapshot.value as! String
+                // adds the name to an array if the name is not already there
+                
+                AppData.names.append(n)
+                    print(n)
+                
+                })
+            
+            
             AppData.singleName = "\(blah)"
             AppData.names.append(blah)
             print(blah)
             print(AppData.singleName)
-            
+            self.ref.child("names").childByAutoId().setValue(AppData.names)
+
             
             })
         

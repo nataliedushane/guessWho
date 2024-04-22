@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+import FirebaseCore
+import FirebaseDatabase
 class OppsViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
-   
+    var ref: DatabaseReference!
+
     
     @IBOutlet weak var opponentsTableViewOutlet: UITableView!
     
@@ -17,6 +19,7 @@ class OppsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         super.viewDidLoad()
         opponentsTableViewOutlet.delegate = self
         opponentsTableViewOutlet.dataSource = self
+        ref = Database.database().reference()
 
         
 
