@@ -26,6 +26,12 @@ class ViewController: UIViewController {
             var blah = firstTextField.text!
             
             
+            AppData.singleName = "\(blah)"
+            AppData.names.append(blah)
+            print(blah)
+            print(AppData.singleName)
+            self.ref.child("names").childByAutoId().setValue(AppData.names)
+            
             self.ref.child("names").observe(.childAdded, with: { (snapshot) in
                 // snapshot is a dictionary with a key and a value
                 
@@ -39,11 +45,7 @@ class ViewController: UIViewController {
                 })
             
             
-            AppData.singleName = "\(blah)"
-            AppData.names.append(blah)
-            print(blah)
-            print(AppData.singleName)
-            self.ref.child("names").childByAutoId().setValue(AppData.names)
+           
 
             
             })
