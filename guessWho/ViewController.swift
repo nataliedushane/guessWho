@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         let saveAction = UIAlertAction(title: "Save", style: UIAlertAction.Style.default, handler: { alert -> Void in
         let firstTextField = alertController.textFields![0] as UITextField
             var blah = firstTextField.text!
-            
+            AppData.key = self.ref.child("names").childByAutoId().key ?? "0"
             
             AppData.singleName = "\(blah)"
             AppData.names.append(blah)
@@ -61,10 +61,13 @@ class ViewController: UIViewController {
     
     
     @objc func appMovedToBackground(){
+       /* print("BRUHHHH")
         for i in 0 ..< AppData.names.count{
             if (AppData.names[i] == AppData.singleName){
-                AppData.names.remove(at: i)
-                self.ref.child("names").childByAutoId().setValue(AppData.names)
+                //AppData.names.remove(at: i)
+                print("HELP")
+                ref.child("names").child(AppData.key).removeValue()
+
 
             }
         }
@@ -73,7 +76,7 @@ class ViewController: UIViewController {
             
         }
         print("i removed the name!")
-    
+    */
     }
 
 
