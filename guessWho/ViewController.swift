@@ -64,6 +64,8 @@ class ViewController: UIViewController {
         for i in 0 ..< AppData.names.count{
             if (AppData.names[i] == AppData.singleName){
                 AppData.names.remove(at: i)
+                self.ref.child("names").childByAutoId().setValue(AppData.names)
+
             }
         }
         for i in 0 ..< AppData.names.count{
