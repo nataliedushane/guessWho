@@ -55,6 +55,26 @@ class ViewController: UIViewController {
             alertController.addAction(saveAction)
             
         self.present(alertController, animated: true, completion: nil)
+        
+        
+        ref.child("names").observe(.childRemoved, with: { (snapshot) in
+            // snapshot is a dictionary with a key and a value
+            
+            for i in 0 ..< AppData.names.count{
+                if (AppData.names[i] == AppData.singleName){
+                    AppData.names.remove(at: i)
+                    print("HELP")
+                    self.ref.child("names").child(AppData.key).removeValue()
+
+
+                }
+            }
+        
+         
+            
+           // self.tableViewOutlet.reloadData()
+           
+        })
         // Do any additional setup after loading the view.
     }
     
