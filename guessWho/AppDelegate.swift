@@ -56,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
+        print("hello")
         ref = Database.database().reference()
 
         print("BRUHHHH")
@@ -73,6 +74,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         print("i removed the name!")
+
     }
 
 
