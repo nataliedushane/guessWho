@@ -62,15 +62,11 @@ class ViewController: UIViewController {
         ref.child("names").observe(.childRemoved, with: { (snapshot) in
             // snapshot is a dictionary with a key and a value
             
-            for i in 0 ..< AppData.names.count{
-                if (AppData.names[i] == AppData.singleName){
-                    AppData.names.remove(at: i)
-                    print("HELP")
-                    self.ref.child("names").child(AppData.key).removeValue()
-
-
-                }
-            }
+            let n = snapshot.value as! [String]
+            // adds the name to an array if the name is not already there
+            AppData.names.append(contentsOf:  n)
+                print(n)
+            
         
          
             
@@ -83,22 +79,14 @@ class ViewController: UIViewController {
     
     
     @objc func appMovedToBackground(){
-       /* print("BRUHHHH")
-        for i in 0 ..< AppData.names.count{
-            if (AppData.names[i] == AppData.singleName){
-                //AppData.names.remove(at: i)
-                print("HELP")
-                ref.child("names").child(AppData.key).removeValue()
+        print("BRUHHHH")
+        print("hello")
+        ref = Database.database().reference()
 
+        self.ref.child("names").child(AppData.key).removeValue()
 
-            }
-        }
-        for i in 0 ..< AppData.names.count{
-            print(AppData.names[i])
-            
-        }
         print("i removed the name!")
-    */
+    
     }
 
 

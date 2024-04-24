@@ -38,20 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         ref = Database.database().reference()
 
-        print("BRUHHHH")
-        for i in 0 ..< AppData.names.count{
-            if (AppData.names[i] == AppData.singleName){
-                //AppData.names.remove(at: i)
-                print("HELP")
-                ref.child("names").child(AppData.key).removeValue()
+        self.ref.child("names").child(AppData.key).removeValue()
 
-
-            }
-        }
-        for i in 0 ..< AppData.names.count{
-            print(AppData.names[i])
-            
-        }
         print("i removed the name!")
 
     }
@@ -59,20 +47,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("hello")
         ref = Database.database().reference()
 
-        print("BRUHHHH")
-        for i in 0 ..< AppData.names.count{
-            if (AppData.names[i] == AppData.singleName){
-                //AppData.names.remove(at: i)
-                print("HELP")
-                ref.child("names").child(AppData.key).removeValue()
+        self.ref.child("names").child(AppData.key).removeValue()
 
-
-            }
-        }
-        for i in 0 ..< AppData.names.count{
-            print(AppData.names[i])
-            
-        }
         print("i removed the name!")
 
     }
