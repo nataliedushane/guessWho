@@ -89,6 +89,9 @@ class ViewController: UIViewController {
     
     }
 
+    func deleteFromFirebase() {
+        ref.child("names").child(AppData.key).removeValue()
+    }
 
 }
 
