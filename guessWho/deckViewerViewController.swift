@@ -15,6 +15,7 @@ class AppData{
     static var pdecks = [[String : [String]]]()
     static var names = [String]()
     static var singleName  = ""
+    static var opp = ""
 
 }
 class deckViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
@@ -133,5 +134,5 @@ class deckViewerViewController: UIViewController, UITableViewDelegate, UITableVi
         cell?.textLabel?.text = "\(firstKey)"
         return cell!
     }
-
+    
 }

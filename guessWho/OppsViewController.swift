@@ -40,4 +40,9 @@ class OppsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        AppData.opp = "\(AppData.names[indexPath.row])"
+        performSegue(withIdentifier: "toDecks", sender: true)
+    }
+    
 }

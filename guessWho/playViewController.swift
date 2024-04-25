@@ -12,6 +12,7 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBOutlet weak var personLabel: UILabel!
     
+    @IBOutlet weak var oppLabel: UILabel!
     
     @IBOutlet weak var collect: UICollectionView!
     
@@ -24,8 +25,9 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }
         collect.delegate = self
         collect.dataSource = self
+        
        
-       
+        oppLabel.text = "Your opp is: \(AppData.opp)"
         
         
         let rand  = Int.random(in: 0...AppData.decks[AppData.bruh][AppData.key]!.count - 1)
