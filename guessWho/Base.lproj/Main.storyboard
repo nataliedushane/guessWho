@@ -326,6 +326,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TCH-QL-F6s">
+                                <rect key="frame" x="285" y="748" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.43137252329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <segue destination="4NG-of-euu" kind="show" id="JdA-RX-Gx4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4Zg-32-N9S"/>
                         <color key="backgroundColor" red="0.96841150519999997" green="0.92038466159999999" blue="0.54523561750000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -340,6 +351,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brI-du-Heh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2403.8167938931297" y="445.77464788732397"/>
+        </scene>
+        <!--Win View Controller-->
+        <scene sceneID="tuU-Vh-Il8">
+            <objects>
+                <viewController id="4NG-of-euu" customClass="WinViewController" customModule="guessWho" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cQS-xb-cyA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RNq-jm-KK4"/>
+                        <color key="backgroundColor" red="0.96862745289999996" green="0.91764706370000004" blue="0.54509806630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="OcU-Qe-p9Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lGL-Ce-c4d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3161" y="446"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eud-az-CDQ">
@@ -362,6 +389,9 @@
     </scenes>
     <resources>
         <image name="guesswho" width="310" height="163"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
