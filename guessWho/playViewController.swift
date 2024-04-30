@@ -74,5 +74,30 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     
+    @IBAction func endGameAction(_ sender: UIButton) {
+        alert()
+       
+        
+    }
+    
+    func alert(){
+        let alert = UIAlertController(title: "Did you win!", message:"", preferredStyle: .alert)
+                
+              alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { _ in
+                  AppData.losses += 1
+              }))
+              alert.addAction(UIAlertAction(title: "Yes",
+                                            style: UIAlertAction.Style.default,
+                                            handler: {(_: UIAlertAction!) in
+                  AppData.wins += 1
+              }))
+        
+        DispatchQueue.main.async {
+            self.present(alert, animated: false, completion: nil)
+        }  
+        
+        
+    }
+    
     
 }

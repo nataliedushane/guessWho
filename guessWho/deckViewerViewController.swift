@@ -16,6 +16,8 @@ class AppData{
     static var names = [String]()
     static var singleName  = ""
     static var opp = ""
+    static var wins = 0
+    static var losses = 0
 
 }
 class deckViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
