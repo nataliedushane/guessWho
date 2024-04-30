@@ -12,12 +12,14 @@ import FirebaseDatabase
 class ViewController: UIViewController {
     
     var ref: DatabaseReference!
+    var defaults = UserDefaults.standard
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
-
+        AppData.wins = defaults.integer(forKey: "theWins")
+        AppData.losses = defaults.integer(forKey: "theLosses")
         let alertController = UIAlertController(title: "Sign in!", message: "", preferredStyle: UIAlertController.Style.alert)
         alertController.addTextField { (textField : UITextField!) -> Void in
                 textField.placeholder = "Enter Name"

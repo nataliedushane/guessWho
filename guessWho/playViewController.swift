@@ -8,7 +8,8 @@
 import UIKit
 
 class playViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-   
+    var defaults = UserDefaults.standard
+
     
     @IBOutlet weak var personLabel: UILabel!
     
@@ -85,11 +86,14 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 
               alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.default, handler: { _ in
                   AppData.losses += 1
+                  self.defaults.set(AppData.losses, forKey: "theLosses")
               }))
               alert.addAction(UIAlertAction(title: "Yes",
                                             style: UIAlertAction.Style.default,
                                             handler: {(_: UIAlertAction!) in
                   AppData.wins += 1
+                  self.defaults.set(AppData.wins, forKey: "theWins")
+
               }))
         
         DispatchQueue.main.async {
