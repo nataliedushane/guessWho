@@ -101,7 +101,6 @@
 		B783337C2B976F610032C5EE = {
 			isa = PBXGroup;
 			children = (
-				BB7E1A5D2BDBEA87008F0B32 /* WinViewController.swift */,
 				B78333872B976F610032C5EE /* guessWho */,
 				B783339E2B976F630032C5EE /* guessWhoTests */,
 				B78333A82B976F630032C5EE /* guessWhoUITests */,
@@ -122,6 +121,7 @@
 		B78333872B976F610032C5EE /* guessWho */ = {
 			isa = PBXGroup;
 			children = (
+				BB7E1A5D2BDBEA87008F0B32 /* WinViewController.swift */,
 				B7E49B7A2B9A16930054385D /* playViewController.swift */,
 				B777B2E22B98C4CA00D68AF7 /* deckViewerViewController.swift */,
 				B7687CD82B9F515B009D2C08 /* CazyCell.swift */,
