@@ -77,7 +77,7 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBAction func endGameAction(_ sender: UIButton) {
         alert()
-       
+        customBack(UIViewController.self)
         
     }
     
@@ -101,6 +101,10 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }  
         
         
+    }
+    
+  func customBack(_ sender: Any) {
+       _ = self.navigationController?.popToRootViewController(animated: true)
     }
     
     
