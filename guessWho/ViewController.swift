@@ -78,9 +78,9 @@ class ViewController: UIViewController {
         ref.child("names").observe(.childRemoved, with: { (snapshot) in
             // snapshot is a dictionary with a key and a value
             
-            let n = snapshot.value as! [String]
+            let n = snapshot.value as! String
             // adds the name to an array if the name is not already there
-            AppData.names.append(contentsOf:  n)
+            AppData.names.append(n)
                 print(n)
             
         
