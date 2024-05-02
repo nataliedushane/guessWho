@@ -42,7 +42,6 @@ class ViewController: UIViewController {
                 
                 self.defaults.set(AppData.singleName, forKey: "theName")
                 
-                AppData.names.append(blah)
                 print(blah)
                 print(AppData.singleName)
                 self.ref.child("names").childByAutoId().setValue(AppData.singleName)
