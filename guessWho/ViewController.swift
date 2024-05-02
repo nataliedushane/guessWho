@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         AppData.wins = defaults.integer(forKey: "theWins")
         AppData.losses = defaults.integer(forKey: "theLosses")
         
-        if(defaults.string(forKey: "theName") != nil){
+        if(defaults.string(forKey: "theName") == nil){
             AppData.singleName = defaults.string(forKey: "theName")!
             print("\(AppData.singleName)")
         }
@@ -38,6 +38,8 @@ class ViewController: UIViewController {
                 AppData.key = self.ref.child("names").childByAutoId().key ?? "0"
                 
                 AppData.singleName = "\(blah)"
+                
+                
                 self.defaults.set(AppData.singleName, forKey: "theName")
                 
                 AppData.names.append(blah)
@@ -60,6 +62,7 @@ class ViewController: UIViewController {
             
             self.present(alertController, animated: true, completion: nil)
         }
+        
         self.ref.child("names").observe(.childAdded, with: { (snapshot) in
             // snapshot is a dictionary with a key and a value
             
