@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         AppData.wins = defaults.integer(forKey: "theWins")
         AppData.losses = defaults.integer(forKey: "theLosses")
         
-        if(defaults.string(forKey: "theName") != nil){
+        if(defaults.string(forKey: "theName") == nil){
             AppData.singleName = defaults.string(forKey: "theName")!
             print("\(AppData.singleName)")
         }
@@ -67,9 +67,9 @@ class ViewController: UIViewController {
             // snapshot is a dictionary with a key and a value
             
             // this gets each name from each snapshot
-            let n = snapshot.value as! [String]
+            let n = snapshot.value as! String
             // adds the name to an array if the name is not already there
-            AppData.names.append(contentsOf:  n)
+            AppData.names.append(n)
             print(n)
             
         })
