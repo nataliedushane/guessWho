@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         AppData.wins = defaults.integer(forKey: "theWins")
         AppData.losses = defaults.integer(forKey: "theLosses")
         
-        if(defaults.string(forKey: "theName") == nil){
+        if(defaults.string(forKey: "theName") != nil){
             AppData.singleName = defaults.string(forKey: "theName")!
             print("\(AppData.singleName)")
         }
@@ -46,7 +46,6 @@ class ViewController: UIViewController {
                 print(blah)
                 print(AppData.singleName)
                 self.ref.child("names").childByAutoId().setValue(AppData.singleName)
-                AppData.names = [""]
                 
                                 
                 
@@ -71,6 +70,7 @@ class ViewController: UIViewController {
             // adds the name to an array if the name is not already there
             AppData.names.append(n)
             print(n)
+            
             
         })
 
