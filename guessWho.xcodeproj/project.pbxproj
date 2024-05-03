@@ -26,6 +26,7 @@
 		B78333C42B9774780032C5EE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B78333C32B9774780032C5EE /* FirebaseFirestore */; };
 		B7E49B7B2B9A16930054385D /* playViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E49B7A2B9A16930054385D /* playViewController.swift */; };
 		BB7E1A5E2BDBEA87008F0B32 /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1A5D2BDBEA87008F0B32 /* WinViewController.swift */; };
+		BBAC6A122BE52C6D00508A52 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBAC6A112BE52C6D00508A52 /* Player.swift */; };
 		BBBC46ED2BD0192300C340CE /* OppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBC46EC2BD0192300C340CE /* OppsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		B78333BA2B9773DF0032C5EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B7E49B7A2B9A16930054385D /* playViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playViewController.swift; sourceTree = "<group>"; };
 		BB7E1A5D2BDBEA87008F0B32 /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		BBAC6A112BE52C6D00508A52 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		BBBC46EC2BD0192300C340CE /* OppsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OppsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +130,7 @@
 				B78333882B976F610032C5EE /* AppDelegate.swift */,
 				B783338A2B976F610032C5EE /* SceneDelegate.swift */,
 				B783338C2B976F610032C5EE /* ViewController.swift */,
+				BBAC6A112BE52C6D00508A52 /* Player.swift */,
 				B783338E2B976F610032C5EE /* Main.storyboard */,
 				BBBC46EC2BD0192300C340CE /* OppsViewController.swift */,
 				B78333B82B9770870032C5EE /* deckMakerViewController.swift */,
@@ -305,6 +308,7 @@
 				B78333B92B9770870032C5EE /* deckMakerViewController.swift in Sources */,
 				BB7E1A5E2BDBEA87008F0B32 /* WinViewController.swift in Sources */,
 				B783338B2B976F610032C5EE /* SceneDelegate.swift in Sources */,
+				BBAC6A122BE52C6D00508A52 /* Player.swift in Sources */,
 				B777B2E32B98C4CA00D68AF7 /* deckViewerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

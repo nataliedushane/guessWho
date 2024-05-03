@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        print("HELP DOES THIS DO WNSYIETH")
+       
         ref = Database.database().reference()
         AppData.wins = defaults.integer(forKey: "theWins")
         AppData.losses = defaults.integer(forKey: "theLosses")
