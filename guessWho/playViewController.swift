@@ -75,11 +75,21 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     
     
-    @IBAction func endGameAction(_ sender: UIButton) {
+    @IBAction func endGameAction2(_ sender: UIButton) {
         alert()
         customBack(UIViewController.self)
+    
+    }
+    
+    @IBAction func guessAction(_ sender: UIButton) {
+        
         
     }
+    
+    
+    
+    
+    
     
     func alert(){
         let alert = UIAlertController(title: "Did you win!", message:"", preferredStyle: .alert)
@@ -103,9 +113,49 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
     }
     
+    func alertForGuess(){
+        
+        let alertController = UIAlertController(title: "Guess", message: "Who do you think they have?", preferredStyle: UIAlertController.Style.alert)
+        alertController.addTextField { (textField : UITextField!) -> Void in
+            textField.placeholder = "Enter Name"
+        }
+        let saveAction = UIAlertAction(title: "Guess", style: UIAlertAction.Style.default, handler: { alert -> Void in
+            let firstTextField = alertController.textFields![0] as UITextField
+            var blah = firstTextField.text!
+          
+            
+            AppData.me  = "\(blah)"
+            
+            
+            self.defaults.set(AppData.singleName, forKey: "theName")
+            
+            print(blah)
+            print(AppData.singleName)
+           
+            
+                            
+            
+            
+            
+            
+        })
+        
+        
+        
+        
+        alertController.addAction(saveAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
   func customBack(_ sender: Any) {
        _ = self.navigationController?.popToRootViewController(animated: true)
     }
+    
+    
+    
+    
+    
     
     
 }
