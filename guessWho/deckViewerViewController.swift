@@ -13,11 +13,12 @@ class AppData{
     static var key = ""
     static var bruh = 0
     static var pdecks = [[String : [String]]]()
-    static var names = [String]()
+    static var players = [[String : Any]]()
     static var singleName  = ""
     static var opp = ""
     static var wins = 0
     static var losses = 0
+    static var me : Player = Player(name: "")
 
 }
 class deckViewerViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{

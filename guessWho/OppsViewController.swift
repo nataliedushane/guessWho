@@ -29,19 +29,19 @@ class OppsViewController: UIViewController,UITableViewDelegate, UITableViewDataS
 
    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return AppData.names.count
+        return AppData.players.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell")!
-        cell.textLabel?.text = "\(AppData.names[indexPath.row])"
+        cell.textLabel?.text = "\(AppData.players[indexPath.row]["name"]!)"
                return cell
         
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        AppData.opp = "\(AppData.names[indexPath.row])"
+        AppData.opp = "\( AppData.players[indexPath.row]["name"]!)"
         performSegue(withIdentifier: "toDecks", sender: true)
     }
     
