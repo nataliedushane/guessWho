@@ -18,9 +18,14 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collect: UICollectionView!
     
     var colors = [UIColor]()
+    var ref: DatabaseReference!
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+
         for bruh in AppData.decks[AppData.bruh][AppData.key]!{
             colors.append(UIColor(red: 247, green: 154, blue: 110, alpha: 0))
         }
@@ -35,6 +40,9 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let per = AppData.decks[AppData.bruh][AppData.key]![rand]
         let alertController = UIAlertController(title: "Your person is: \(per)", message: "", preferredStyle: UIAlertController.Style.alert)
         self.personLabel.text = "You have: \(per)"
+        AppData.me.personYouHave = per
+        self.ref.child("users").child(AppData.key).setValue(["personYouHave": AppData.me.personYouHave])
+
         let saveAction = UIAlertAction(title: "Perf", style: UIAlertAction.Style.default, handler: { alert -> Void in
                 
            
@@ -124,8 +132,9 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
             var blah = firstTextField.text!
           
             
-            AppData.me  = "\(blah)"
-            
+            AppData.me.guess = "\(blah)"
+            self.ref.child("users").child(AppData.key).setValue(["guess": AppData.me.guess])
+
             
             self.defaults.set(AppData.singleName, forKey: "theName")
             
