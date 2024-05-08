@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabaseInternal
 
 class playViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     var defaults = UserDefaults.standard
@@ -91,7 +92,7 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     @IBAction func guessAction(_ sender: UIButton) {
         
-        
+        alertForGuess()
     }
     
     

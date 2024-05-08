@@ -67,8 +67,8 @@ class deckViewerViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func privDeck(_ sender: Any) {
-        let alertController = UIAlertController(title: "What's the password", message: "", preferredStyle: UIAlertController.Style.alert)
-        alertController.addTextField { (textField : UITextField!) -> Void in
+            let alertController = UIAlertController(title: "What's the password", message: "", preferredStyle: UIAlertController.Style.alert)
+            alertController.addTextField { (textField : UITextField!) -> Void in
                 textField.placeholder = "Enter Password"
             }
         let saveAction = UIAlertAction(title: "Enter", style: UIAlertAction.Style.default, handler: { alert -> Void in
@@ -88,6 +88,9 @@ class deckViewerViewController: UIViewController, UITableViewDelegate, UITableVi
                     
                 }
                 if(AppData.decks == AppData.pdecks){
+                    print(AppData.decks)
+                    print("pleaseeeeee")
+                    self.performSegue(withIdentifier: "toPlay", sender: true)
                     break
                 }
             }
@@ -105,10 +108,11 @@ class deckViewerViewController: UIViewController, UITableViewDelegate, UITableVi
                 
            
             })
-        falertController.addAction(fsaveAction)
         
+        falertController.addAction(fsaveAction)
+    
     self.present(falertController, animated: true, completion: nil)
-        self.performSegue(withIdentifier: "toPlay", sender: true)
+       
 
     }
     
