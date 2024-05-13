@@ -134,7 +134,7 @@ class playViewController: UIViewController, UICollectionViewDelegate, UICollecti
           
             
             AppData.me.guess = "\(blah)"
-            self.ref.child("users").child(AppData.key).setValue(["guess": AppData.me.guess])
+            self.ref.child("players").child(AppData.key).setValue(["guess": AppData.me.guess])
 
             
             self.defaults.set(AppData.singleName, forKey: "theName")
